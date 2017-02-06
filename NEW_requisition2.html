@@ -1,0 +1,148 @@
+<!DOCTPYE html>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   <!--- basic page nee
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Rak Karn Arn Library</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+
+   		<div class="logo">
+	         <a href="index2.html">Library</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation">
+					<li class="current"><a class="smoothscroll"  href="#intro" title="">Request</a></li>
+					<li><a class="smoothscroll"  onclick="location.href='search2.php'" href="search2.php">SEARCH BOOK</a></li>				
+					<li class="highlight with-sep"><a class="smoothscroll" onclick="location.href='memberInfo.html'" href="memberInfo.html" >MY PROFILE</a></li>					
+				</ul>
+			</nav>
+
+			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   		
+   	</div>   	
+   	
+   </header> <!-- /header -->
+<script>
+    alert("ONE RECORD ADDDED.");
+</script>
+
+<html>
+	<head>
+		<title>
+		Book/CD Requisition
+		</title>
+	</head>
+	<body>
+		<form action="action.php" method ="post">
+			<br><br><br><br><br>
+			<center>
+				<h1 style="color:white;">
+				Book/CD Requisition
+				</h1>
+			</center>
+			<center>
+					<tr>
+						<td>
+						Type of item
+						</td>
+						<td>
+							<input style="color:white;" type="radio" name="TypeofItem" value="Book">BOOK
+							<input type="radio" name="TypeofItem" value="CD">CD
+						</td><br>
+					</tr>
+					<tr>
+						<td>
+						ISBN/ISSN
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="ISBN_ISSN">
+						</td>
+						<td>
+						Title
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="Title">
+						</td><br>
+					</tr>
+					<tr>
+						<td>
+						Edition
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="Edition">
+						</td>
+						<td>
+						Publisher
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="Publisher">
+						</td><br>
+					</tr>
+					<tr>
+						<td>
+						Language
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="Language">
+						</td>
+						<td>
+						Price
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="Price">
+						</td><br>
+					</tr>
+					<tr>
+						<td>
+						Author/Producer 
+						</td>
+						<td>
+							<input style="color:white;" type="text" name="Author_Producer">
+						</td>
+					</tr>
+					<tr>
+						<td colspan = 4>
+							<center>
+								<br>
+									<input type="submit" value="Submit">  
+							</center>
+					</tr>
+			</center>	
+		</form>
+	</body>
+</html>

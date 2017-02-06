@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Rak Karn Arn Library</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+
+   		<div class="logo">
+	         <a href="index.html">Library</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation">
+					<li class="current"><a class="smoothscroll" onclick="location.href='index.html'" href="index.html" title="">Home</a></li>
+					<li><a class="smoothscroll"  href="#testimonials" title="">NEW ARRIVAL</a></li>
+					<li><a class="smoothscroll"  onclick="location.href='Analysis.html'" href="Analysis.html" title="">ANALYSIS</a></li>
+					<li><a class="smoothscroll"  onclick="location.href='Sign-in.html'" href="Sign-in.html" title="">Log-In</a></li>				
+					<li class="highlight with-sep"><a class="smoothscroll" onclick="location.href='libSignIn.html'" href="libSignIn.html" title="">Librarian</a></li>					
+				</ul>
+			</nav>
+
+			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   		
+   	</div>   	
+   	
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+   	<div class="shadow-overlay"></div>
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>Welcome to Library.</h5><br><br>
+				<center>
+				<form action="search.php" method ="post">
+				<input type="text" name="search" value="" placeholder="Search Book" required="">
+				<select name="TypeSearch">
+               <option value="All" selected>Select Type</option>
+               <option value="BookTitle">Book Title</option>
+               <option value="CDTitle">CD Title</option>
+               <option value="ISBN">ISBN</option>
+               <option value="ISSN">ISSN</option>
+               <option value="Author">Author</option>
+               <option value="Producer">Producer</option>
+                           
+            </select>
+				</center>
+	   			<input type="SUBMIT" name="submitsearch" value="Search" />
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> 
+   </section> <!-- /intro -->
+
+
+<!-- Testimonials Section
+ ================================================== -->
+<section id="testimonials">
+    
+   	<div class="row">
+        <div class="col-twelve">
+            <h2 class="h01">NEWS UPDATE</h2>
+        </div>
+   	</div>
+    
+    <div class="row flex-container">
+        
+        <div id="testimonial-slider" class="flexslider">
+            
+            <ul class="slides">
+                
+                <li>
+                    <div class="testimonial-author">
+                        <img src="images/avatars/library.png" alt="Author image">
+                            <div class="author-info">
+                                NEW BOOKS ARIVAL
+                                <span class="position">OF DECEMBER</span>
+                            </div>
+                            </div>
+                    
+                    <p><table>
+                        <tr>
+                            <td>
+                                
+                                <img src="images/harry.jpg" alt="Author image" height="200" width="100">
+                                    <div class="author-info">
+                                        HARRY POTTER
+                                        <span class="position">AND THE CURSED CHILD</span>
+                                    </div>
+                                    </td>
+                            <td>
+                                
+                                <img src="images/fantastic.jpg" alt="Author image" height="200" width="100">
+                                    <div class="author-info">
+                                        FANTASTIC BEASTS
+                                        <span class="position">THE ORIGINAL SCREENPLAY</span>
+                                    </div>
+                                    </td>
+                            <td>
+                                
+                                <img src="images/Head.jpg" alt="Author image" height="200" width="100">
+                                    <div class="author-info">
+                                        NIW GOM
+                                        <span class="position">HEAD</span>
+                                    </div>
+                                    </td>
+                        </tr>
+                        
+                        
+                    </table></p>
+                </li> <!-- /slide -->
+                
+                <li>
+                    
+                    <div class="testimonial-author">
+                        <img src="images/avatars/library.png" alt="Author image">
+                            <div class="author-info">
+                                TOP BOOK
+                                <span>OF DECEMBER</span>
+                            </div>
+                            </div>
+                    
+                    <p><table>
+                        <tr>
+                            <td>
+                                
+                                <img src="images/jack.jpg" alt="Author image" height="200" width="100">
+                                    <div class="author-info">
+                                        ALIBABA
+                                        <span class="position">THE HOUSE THAT JACK MA BUILT</span>
+                                    </div>
+                                    </td>
+                            <td>
+                                
+                                <img src="images/job.jpg" alt="Author image" height="200" width="100">
+                                    <div class="author-info">
+                                        STEVE JOBS
+                                        <span class="position">BY WALTER ISAACSON</span>
+                                    </div>
+                                    </td>
+                            <td>
+                                
+                                <img src="images/gameofthrone.jpg" alt="Author image" height="200" width="100">
+                                    <div class="author-info">
+                                        GAME OF THRONE
+                                        
+                                    </div>
+                                    </td>
+                        </tr>
+                        
+                        
+                    </table></p>
+                    
+                </li> <!-- /slide -->
+                
+            </ul> <!-- /slides -->
+            
+        </div> <!-- /testimonial-slider -->         
+        
+    </div> <!-- /flex-container -->
+    
+</section> <!-- /testimonials -->
+
+			      
+
+			
+
+		
+
+
+   
+
+    
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-1.11.3.min.js"></script>
+   <script src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>

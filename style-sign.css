@@ -1,0 +1,26 @@
+/*CSS File For Sign-In webpage*/ 
+#body-color{ 
+	background-color:#cc9966; } 
+	#Sign-In{ 
+		margin-top:150px; 
+		margin-bottom:150px; 
+		margin-right:150px;
+		margin-left:450px; 
+		border:3px solid #a1a1a1; 
+		padding:15px 40px; 
+		background:#A9A9A9	; 
+		width:500px; 
+		border-radius:20px; 
+		box-shadow: 7px 7px 6px;
+		font-family:sans-serif; 
+		} 
+	#button{ 
+		border-radius:10px; 
+		width:100px; 
+		height:40px; 
+		background:#FFFFFF; 
+		font-weight:bold; 
+		font-size:20px 
+		font-family:sans-serif;
+		}
+

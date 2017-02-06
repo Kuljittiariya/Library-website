@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+   <!-- header 
+   ================================================== -->
+   <header>
+
+      <div class="row">
+
+         <div class="logo">
+            <a href="index.html">Library</a>
+         </div>
+       
+         <nav id="main-nav-wrap">
+            <ul class="main-navigation">
+                   
+          <li><a class="smoothscroll" onclick="location.href='libInfo.php'" href="libInfo.php" >LIBRARY HOME</a></li>      
+            </ul>
+         </nav>
+
+         <a class="menu-toggle" href="#"><span>Menu</span></a>
+         
+      </div>      
+      
+   </header> <!-- /header --> 
+
+<style>
+div.id01 {
+    width: 700px;
+    margin: auto;
+}
+table, th , td {
+    padding: 15px;
+    text-align: left;
+}
+
+/*body{
+   color: #800000; 
+   font-family: sans-serif;
+   background: #d9b38c;
+}*/
+table tr:first-child
+{
+   background: #800000;
+   text-align: center;
+}
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+    color: #000000;
+}
+</style>
+</head>
+
+
+<br />
+<br />
+<br />
+<br />
+<center>
+<h1><font color= "white"> MEMBER INFORMATION </font></h1>
+</center>
+</head>
+
+<body>
+
+<div id="id01"></div>
+
+<script>
+loadPapers();
+
+function loadPapers(){
+var xmlhttp = new XMLHttpRequest();
+var url = "http://www.zp9943.tld.122.155.18.18.no-domain.name/getmem.php";
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        displayResponse(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+}
+
+function displayResponse(response) {
+    var arr = JSON.parse(response);
+    var i;
+    var out = "<table>";
+    out += "<tr><td>" + "ID MEMBER" + "</td><td>" + "FIRSTNAME" + "</td><td>" + "LASTNAME" + "</td><td>" + "DATE OF BIRTH" + "</td><td>" + "SEXUAL" + "</td><td>" + "TYPE"+ "</td><td>" + "DELETE ITEM" + "</td></tr>";
+    for(i = 0; i < arr.length; i++) {
+        out += "<tr><td>" + 
+        arr[i].MemberID +
+        "</td><td>" +
+        arr[i].FirstName +
+        "</td><td>" +
+        arr[i].LastName+
+        "</td><td>" +
+        arr[i].DateOfBirth+
+        "</td><td>" +
+        arr[i].Gender+    
+        "</td><td>" +
+        arr[i].MemberTypeCode+
+        "</td><td>" +
+        "<button onclick=\"deletePaper('"+arr[i].MemberID+"')\">Delete</button>"+
+        "</td></tr>";
+    }
+    out += "</table>";
+    document.getElementById("id01").innerHTML = out;
+}
+
+
+function deletePaper(MemberID) {
+var xmlhttp = new XMLHttpRequest();
+var url = "http://www.zp9943.tld.122.155.18.18.no-domain.name/deletemem.php?MemberID="+MemberID;
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+     //displayResponse(xmlhttp.responseText);
+    loadPapers();
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+}
+</script>
+
+</body>
+</html>

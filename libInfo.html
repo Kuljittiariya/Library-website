@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+
+   		<div class="logo">
+	         <a href="index.html">Library</a>
+	      </div>
+	    
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation">
+					<li class="current"><a class="smoothscroll"  href="#intro" title="">MY PROFILE</a></li>		
+          <li><a class="smoothscroll" onclick="location.href='signout.php'" href="signout.php" >LOG-OUT</a></li>      
+				</ul>
+			</nav>
+
+			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   		
+   	</div>   	
+   	
+   </header> <!-- /header --> 
+
+
+
+<style>
+table, th , td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+     border-spacing: 10px 50px;
+    padding: 5px;
+}
+h1 {
+	margin-left: 7cm;
+}
+/*body{
+	color: #800000; 
+	font-family: sans-serif;
+	background: #d9b38c;
+}*/
+table tr:first-child
+{
+	background: #800000;
+	text-align: center;
+}
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+    color: #000000;
+}
+</style>
+</head>
+
+<!-- intro section
+   ================================================== -->
+<section id="faq">
+<h4>LIBRALIAN INFORMATION</h4>
+
+<h5>LIBRALIAN ID 	:</h5>  <?php session_start(); echo('$_SESSION['LibrarianID']'); echo("eiei"); ?><br>
+<h5>LIBRALIAN NAME 	:</h5> <h5 id = "libFirstname"></h5><br><br>
+
+<div id="id01"></div>
+
+
+
+<body>
+  <center>
+    <h5>ACITIVITY BOOK/CD</h5>
+      <ul class="main-navigation">
+        <li><a class="smoothscroll" onclick="location.href='Additem.html'" href="Additem.html" >ADDITION</a></li><li><a class="smoothscroll" >BORROW</a></li><li><a class="smoothscroll" >RETURN</a></li>
+      </ul>
+
+
+  </center>
+  
+
+
+</body>
+</section>
+</html>

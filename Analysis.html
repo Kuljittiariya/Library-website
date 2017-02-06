@@ -1,0 +1,303 @@
+<!DOCTPYE html>
+<html>
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Rak Karn Arn Library</title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/new.css">
+   <link rel="stylesheet" href="css/vendor.css">
+
+   <!-- script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+
+   <!-- favicons
+   ================================================== -->
+   <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+   <header>
+
+      <div class="row">
+
+         <div class="logo">
+            <a href="index.html">Library</a>
+         </div>
+
+         <nav id="main-nav-wrap">
+            <ul class="main-navigation">
+               <li class="current"><a class="smoothscroll" onclick="location.href='index.html'" href="index.html" title="">Home</a></li>
+               <li class="current"><a class="smoothscroll" onclick="location.href='search.php'" href="search.php" title="">SEARCH</a></li>
+              <li><a class="smoothscroll"  onclick="location.href='Analysis.html'" href="Analysis.html" title="">ANALYSIS</a></li>
+              <li><a class="smoothscroll"  onclick="location.href='Sign-in.html'" href="Sign-in.html" title="">Log-In</a></li>        
+              <li class="highlight with-sep"><a class="smoothscroll" onclick="location.href='libSignIn.html'" href="libSignIn.html" title="">Librarian</a></li>
+            </ul>
+         </nav>
+
+         <a class="menu-toggle" href="#"><span>Menu</span></a>
+
+      </div>
+
+   </header> <!-- /header -->
+
+<body style="color:white;">
+    <center>
+        <br><br><br><br><br>Data Analysis
+    </center>
+        <div onclick="ans1()">
+          <br><dd>1. The top 3 least frequent borrowing member of current year.
+        </div>
+        <div id="ans1"></div>
+
+        <div onclick="ans2()">
+          <br><dd>2. The title of the most frequent borrowed book of current year.
+        </div>
+        <div id="ans2"></div>
+
+        <div onclick="ans3()">
+         <br><dd>3. The most frequent borrowing member of current year.
+        </div>
+        <div id="ans3"></div>
+
+        <div style = "color:white;" onclick="ans4()">
+          <br><dd>4. The total amount of members divided into Student and general member type.
+        </div>
+        <div id="ans4"></div>
+
+        <div style = "color:white;" onclick="ans5()">
+        <br><dd>5. Author who write the most of book in our library.
+        </div>
+        <div id="ans5"></div>
+
+        <div style = "color:white;" onclick="ans6()">
+        <br><dd>6. Statistic top 3 of requested books sorted by descending order.
+        </div>
+        <div id="ans6"></div>
+
+         <div style = "color:white;" onclick="ans7()">
+        <br><dd>7. A list of member who have not returned books on time yet.
+        </div>
+        <div id="ans7"></div>
+
+        <div style = "color:white;" onclick="ans8()">
+        <br><dd>8. A number of items in each type.
+        </div>
+        <div id="ans8"></div>
+
+        <div style = "color:white;" onclick="ans9()">
+        <br><dd>9. The name  of librarian who provide the most frequent borrowing service.
+        </div>
+        <div id="ans9"></div>
+
+        <div style = "color:white;" onclick="ans10()">
+        <br><dd>10. A total of member separated by gender.
+        </div>
+        <div id="ans10"></div>
+
+        <div style = "color:white;" onclick="ans11()">
+        <br><dd>11. The list of new arrival book in December.
+        </div>
+        <div id="ans11"></div>
+
+        <div style = "color:white;" onclick="ans12()">
+        <br><dd>12. Person who pay the most expensive fine in December.
+        </div>
+        <div id="ans12"></div>
+
+
+
+
+
+
+
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function ans1(){
+        $.post("ans1.php", {
+
+         }, function(data){
+            document.getElementById("ans1").innerHTML = data;
+        })
+        var x = document.getElementById('ans1');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans2(){
+        $.post("ans2.php", {
+
+         }, function(data){
+            document.getElementById("ans2").innerHTML = data;
+        })
+        var x = document.getElementById('ans2');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans3(){
+        $.post("ans3.php", {
+
+         }, function(data){
+            document.getElementById("ans3").innerHTML = data;
+        })
+        var x = document.getElementById('ans3');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans4(){
+        $.post("ans4.php", {
+
+         }, function(data){
+            document.getElementById("ans4").innerHTML = data;
+        })
+        var x = document.getElementById('ans4');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans5(){
+        $.post("ans5.php", {
+
+         }, function(data){
+            document.getElementById("ans5").innerHTML = data;
+        })
+        var x = document.getElementById('ans5');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans6(){
+        $.post("ans6.php", {
+
+         }, function(data){
+            document.getElementById("ans6").innerHTML = data;
+        })
+        var x = document.getElementById('ans6');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans7(){
+        $.post("ans7.php", {
+
+         }, function(data){
+            document.getElementById("ans7").innerHTML = data;
+        })
+        var x = document.getElementById('ans7');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans8(){
+        $.post("ans8.php", {
+
+         }, function(data){
+            document.getElementById("ans8").innerHTML = data;
+        })
+        var x = document.getElementById('ans8');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans9(){
+        $.post("ans9.php", {
+
+         }, function(data){
+            document.getElementById("ans9").innerHTML = data;
+        })
+        var x = document.getElementById('ans9');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans10(){
+        $.post("ans10.php", {
+
+         }, function(data){
+            document.getElementById("ans10").innerHTML = data;
+        })
+        var x = document.getElementById('ans10');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans11(){
+        $.post("ans11.php", {
+
+         }, function(data){
+            document.getElementById("ans11").innerHTML = data;
+        })
+        var x = document.getElementById('ans11');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+      function ans12(){
+        $.post("ans12.php", {
+
+         }, function(data){
+            document.getElementById("ans12").innerHTML = data;
+        })
+        var x = document.getElementById('ans12');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+
+    </script>
+
+</html>

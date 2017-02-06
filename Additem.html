@@ -1,0 +1,305 @@
+<!DOCTPYE html>
+<html>
+	<head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+                <link rel="stylesheet" href="add.css">
+
+		<title>
+		Item Addition
+		</title>
+
+
+
+        <script language="JavaScript">
+            function showHide(elementid){
+                if (document.getElementById(elementid).style.display == 'none'){
+                    document.getElementById(elementid).style.display = '';
+                }else {
+                    document.getElementById(elementid).style.display = 'none';
+                }
+            }
+        </script>
+	</head>
+	<body class= "body">
+
+			<a href="http://www.zp9943.tld.122.155.18.18.no-domain.name/libInfo.php">
+			<button type="button" class="btn btn-default btn-lg btn-block">GO BACK TO LIBRARIAN HOME</button>
+			</a>
+
+
+			<center>
+				<h2>
+                <div class = "item">
+				Item Addition
+				</h2>
+			</center>
+			<center>
+				<table>
+					<tr>
+						<td>
+						Type of item
+						</td>
+						<td>
+                            <button onclick="javascript:showHide('book');">BOOK</button><br>
+                            <button onclick="javascript:showHide('cd');">CD</button>
+						</td>
+					</tr>
+					<tr>
+				</table>
+
+                <div id="book" style="display:none;">
+                    <form action="add.php" method ="post">
+				<table>
+					<tr>
+						<td>
+						ISBN
+						</td>
+						<td>
+							<input type="text" name="ISBN">
+						</td>
+						<td>
+						Title
+						</td>
+						<td>
+							<input type="text" name="Title">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						Format
+						</td>
+						<td>
+                        <select name = "Format">
+                            <option value="articles" select>ARTICLES</option>
+                            <option value="monographs" select>MONOGRAPHS</option>
+                            <option value="pamphlet" select>PAMPHLET</option>
+                            <option value="maps&globe" select>MAPS AND GLOBE</option>
+                            <option value="research" select>RESEARCH</option>
+                            <option value="solamannuals" select>SOLAMANNUALS</option>
+                            <option value="standards" select>STANDARDS</option>
+                        </select>
+						</td>
+						<td>
+						Author
+						</td>
+						<td>
+							<input type="text" name="Author">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						Edition
+						</td>
+						<td>
+							<input type="text" name="Edition">
+						</td>
+						<td>
+						Publisher
+						</td>
+						<td>
+							<input type="text" name="Publisher">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						Language
+						</td>
+						<td>
+							<input type="text" name="Language">
+						</td>
+                        <td>
+                            Quantity
+                        </td>
+                        <td>
+                            <input type="text" name="Quantity">
+                        </td>
+					</tr>
+                    <tr>
+                        <td>
+                        Date
+                        </td>
+                        <td>
+                            <input type="date" name="ArrivalDate">
+                        </td>
+                        <td>
+                        Borrow Period
+                        </td>
+                        <td>
+                            <input type="text" name="BorrowPeriod">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Category
+                        </td>
+                        <td>
+                            <select name = "Category">
+                                <option value="A" select>Agriculture</option>
+                                <option value="B" select>General Works</option>
+                                <option value="C" select>Philosophy</option>
+                                <option value="D" select>Medicine</option>
+                                <option value="E" select>Education</option>
+                                <option value="F" select>Fine Arts</option>
+                                <option value="G" select>Geography</option>
+                                <option value="H" select>History</option>
+                                <option value="I" select>Language and Literature</option>
+                                <option value="J" select>Military Service</option>
+                                <option value="L" select>Law</option>
+                                <option value="M" select>Music</option>
+                                <option value="N" select>News</option>
+                                <option value="O" select>Social Science</option>
+                                <option value="P" select>Politic Science</option>
+                                <option value="S" select>Science</option>
+                                <option value="T" select>Technology</option>
+                                <option value="U" select>Fiction</option>
+                            </select>
+                        </td>
+                    </tr>
+					<tr>
+						<td colspan = 4>
+						Description
+							<br>
+								<textarea name="Description" rows="5" cols="75"> </textarea>
+						</td>
+					</tr>
+					<tr>
+						<td colspan = 4>
+							<center>
+								<br>
+									<input type="submit" value="ADD">
+							</center>
+					</tr>
+                    </form>
+				</table>
+                </div>
+
+
+                <div id="cd" style="display:none;">
+                    <form action="add1.php" method ="post">
+                        <table>
+                            <tr>
+                                <td>
+                                    ISSN
+                                </td>
+                                <td>
+                                    <input type="text" name="ISSN">
+                                        </td>
+                                <td>
+                                    Title
+                                </td>
+                                <td>
+                                    <input type="text" name="Title">
+                                        </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Format
+                                </td>
+                                <td>
+                                    <select name = "Format">
+                                        <option value="CD" select>CD</option>
+                                        <option value="VCD" select>VCD</option>
+                                        <option value="DVD" select>DVD</option>
+                                        <option value="BLU-RAY" select>BLU-RAY</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Producer
+                                </td>
+                                <td>
+                                    <input type="text" name="Producer">
+                                </td>
+                                <td>
+                                    CoverCD
+                                </td>
+                                <td>
+                                    <input type="text" name="CoverCD">
+                                        </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Language
+                                </td>
+                                <td>
+                                    <input type="text" name="Language">
+                                        </td>
+                                <td>
+                                    Quantity
+                                </td>
+                                <td>
+                                    <input type="text" name="Quantity">
+                                        </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Date
+                                </td>
+                                <td>
+                                    <input type="date" name="ArrivalDate">
+                                </td>
+                                <td>
+                                    Borrow Period
+                                </td>
+                                <td>
+                                    <input type="text" name="BorrowPeriod">
+                                        </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Category
+                                </td>
+                                <td>
+                                    <select name = "Category">
+                                        <option value="A" select>Agriculture</option>
+                                        <option value="B" select>General Works</option>
+                                        <option value="C" select>Philosophy</option>
+                                        <option value="D" select>Medicine</option>
+                                        <option value="E" select>Education</option>
+                                        <option value="F" select>Fine Arts</option>
+                                        <option value="G" select>Geography</option>
+                                        <option value="H" select>History</option>
+                                        <option value="I" select>Language and Literature</option>
+                                        <option value="J" select>Military Service</option>
+                                        <option value="L" select>Law</option>
+                                        <option value="M" select>Music</option>
+                                        <option value="N" select>News</option>
+                                        <option value="O" select>Social Science</option>
+                                        <option value="P" select>Politic Science</option>
+                                        <option value="S" select>Science</option>
+                                        <option value="T" select>Technology</option>
+                                        <option value="U" select>Fiction</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan = 4>
+                                    Description
+                                    <br>
+                                    <textarea name="Description" rows="5" cols="75"> </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan = 4>
+                                    <center>
+                                        <br>
+                                        <input type="submit" value="ADD">
+                                    </center>
+                            </tr>
+
+
+                            </form>
+                    </table>
+                </div>
+			</center>
+		</form>
+	</body>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>
